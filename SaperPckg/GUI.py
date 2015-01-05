@@ -1,7 +1,7 @@
 __author__ = 'igawenda'
 
 from tkinter import *
-from logic import Saper
+from SaperPckg.logic import Saper
 
 
 class Window():
@@ -13,6 +13,8 @@ class Window():
         frame = Frame(parent, background="black", height=200, width=300)
         frame.grid(row=1)
         self.center_window()
+        lol = Saper.boardHeight
+        print(lol)
 
     def center_window(self):
         width = 300
@@ -24,10 +26,8 @@ class Window():
         self.parent.geometry('%dx%d+%d+%d' % (width, height, x, y))
 
     def button_creator(self, col_count, row_count):
-        Saper.init_board()
-
-
-
+        lol = Saper.boardHeight
+        print(lol)
 
 root = Tk()
 window = Window(root)

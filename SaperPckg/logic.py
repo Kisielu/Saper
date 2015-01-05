@@ -55,31 +55,32 @@ class Saper():
             # Pokazanie wszystkich wspólnych zer i otaczających numerów
             if row > 0:
                 if col > 0:
-                    Saper.left_click(row-1, col - 1)
-                Saper.left_click(row-1, col)
+                    Saper.left_click(self, row-1, col - 1)
+                Saper.left_click(self, row-1, col)
                 if col < (Saper.boardWidth - 1):
-                    Saper.left_click(row-1, col + 1)
+                    Saper.left_click(self, row-1, col + 1)
             if row < (Saper.boardHeight - 1):
                 if col > 0:
-                    Saper.left_click(row+1, col - 1)
-                Saper.left_click(row+1, col)
+                    Saper.left_click(self, row+1, col - 1)
+                Saper.left_click(self, row+1, col)
                 if col < (Saper.boardWidth - 1):
-                    Saper.left_click(row+1, col + 1)
+                    Saper.left_click(self, row+1, col + 1)
             if col > 0:
-                Saper.left_click(row, col - 1)
+                Saper.left_click(self, row, col - 1)
             if col < (Saper.boardWidth - 1):
-                Saper.left_click(row, col + 1)
+                Saper.left_click(self, row, col + 1)
 
     def show_all_bombs(self):
         for row in range(0, Saper.boardHeight):
             for column in range(0, Saper.boardWidth):
                 if board[row, column] >= 9:
-                    Saper.left_click(row, column)# Placeholder
+                    Saper.left_click(self, row, column)# Placeholder
 
-    def right_click(row, col):
+    def right_click(self, row, col):
         global board
+        Saper.right_click(self, row, col)
         # Ustawia flagę
 
-    init_board()
-    generate_bombs()
-    print(board)
+# init_board()
+#  generate_bombs()
+# print(board)
