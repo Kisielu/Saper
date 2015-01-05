@@ -1,4 +1,4 @@
-__author__ = 'pkisielewicz'
+__author__ = 'pkisielewicz $ igawenda'
 
 import random
 
@@ -81,6 +81,6 @@ class Saper():
         Saper.right_click(self, row, col)
         # Ustawia flagę
 
-# init_board()
-#  generate_bombs()
-# print(board)
+    #Saper.init_board()
+    #Saper.generate_bombs()
+    #print(board)
